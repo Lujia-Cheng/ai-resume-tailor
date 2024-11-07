@@ -1,0 +1,187 @@
+{
+  "type": "object",
+  "properties": {
+    "contact": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone_number": {
+          "type": "string"
+        },
+        "linkedin": {
+          "type": "string",
+          "format": "uri"
+        },
+        "github": {
+          "type": "string",
+          "format": "uri"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": ["name", "email"]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "degree": {
+            "type": "string"
+          },
+          "majors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "minors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "institution": {
+            "type": "string"
+          },
+          "start": {
+            "type": "object",
+            "properties": {
+              "month": {
+                "type": "string"
+              },
+              "year": {
+                "type": "string"
+              }
+            }
+          },
+          "end": {
+            "type": "object",
+            "properties": {
+              "month": {
+                "type": "string"
+              },
+              "year": {
+                "type": "string"
+              },
+              "present": {
+                "type": "boolean"
+              }
+            }
+          },
+          "achievements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "relevant_courses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["degree", "institution", "start"]
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "company": {
+            "type": "string"
+          },
+          "start": {
+            "type": "object",
+            "properties": {
+              "month": {
+                "type": "string"
+              },
+              "year": {
+                "type": "string"
+              }
+            }
+          },
+          "end": {
+            "type": "object",
+            "properties": {
+              "month": {
+                "type": "string"
+              },
+              "year": {
+                "type": "string"
+              },
+              "present": {
+                "type": "boolean"
+              }
+            }
+          },
+          "description": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "project_name": {
+            "type": "string"
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "summary": {
+            "type": "string"
+          },
+          "description": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "link": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "leadership_activities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
